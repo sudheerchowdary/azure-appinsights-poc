@@ -1,0 +1,11 @@
+server:
+  port: 9092
+  sendReasonPhrase: true
+spring:
+  application:
+    name: azure-appinsights-demo-app2
+---
+### Azure App Insights Settings ###
+azure:
+  application-insights:
+    instrumentation-key: 6a508921-6f50-4197-995f-ec0082894d30

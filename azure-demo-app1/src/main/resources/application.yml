@@ -1,0 +1,36 @@
+server:
+  port: 9091
+  sendReasonPhrase: true
+
+### Database Settings ###
+spring:
+  datasource:
+    url: jdbc:h2:mem:SMS;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    username: admin
+    password: admin
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+    ddl-auto: update
+    hibernate:
+      show_sql: false
+      use_sql_comments: false
+      format_sql: false
+  ###  H2 Settings --> http://localhost:9091/console  ###
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: true
+        web-allow-others: true
+  application:
+    name: azure-appinsights-demo-app1
+---
+### Azure App Insights Settings ###
+azure:
+  application-insights:
+    instrumentation-key: 6a508921-6f50-4197-995f-ec0082894d30
+
